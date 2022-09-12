@@ -10,8 +10,8 @@ Welcome to CS 110. I look forward to working with you this semester. This is you
 
 ## Student Info - MUST BE COMPLETED
 
-Preferred Name: Justin 
+Preferred Name: Justin Tunney
 
 Discord username: justin_tunneyBU
 
-REPL url: https://replit.com/@JustinTunney/MainFolder#README.md 
+REPL url: [https://replit.com/@JustinTunney/MainFolder#README.md ](https://replit.com/join/otgxjaycax-justintunney)
