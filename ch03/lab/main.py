@@ -40,7 +40,7 @@ leonardo.goto(-100,-20)
 michelangelo.down() 
 leonardo.down()
 
-for i in []*10:
+for i in range(10):
   michelangelo.forward(random.randint(1,11))
   leonardo.forward(random.randint(1,11))
 
@@ -51,6 +51,19 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 # PART B - complete part B here
+#(Step 1) Declare variables
+coords = []
+num_sides = 8
+side_length = 10
+offset = 10
 
+#(Step 2) 
+for i in range(5):
+  theta = (2.0 * math.pi * (i)) / num_sides
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append(x, y)
+
+#(Step 3)
 
 window.exitonclick()
