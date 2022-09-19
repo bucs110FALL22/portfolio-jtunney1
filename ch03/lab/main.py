@@ -29,6 +29,7 @@ michelangelo.down()
 leonardo.down()
 michelangelo.forward(random_a)
 leonardo.forward(random_b)
+pygame.time.wait(1000)
 
 #reset turtles to start
 michelangelo.up() 
@@ -43,7 +44,11 @@ leonardo.down()
 for i in range(10):
   michelangelo.forward(random.randint(1,11))
   leonardo.forward(random.randint(1,11))
+  #so we can see result
+  pygame.time.wait(100)
 
+#so we can see result
+pygame.time.wait(500)
 #reset turtles to start
 michelangelo.up() 
 leonardo.up()
