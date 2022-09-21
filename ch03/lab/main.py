@@ -52,6 +52,7 @@ for i in range(10):
 
 #so we can see result
 pygame.time.wait(500)
+
 #reset turtles to start
 michelangelo.up() 
 leonardo.up()
@@ -59,23 +60,27 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 # PART B - complete part B here
+
 #(Step 1) Declare variables
 coords = []
-num_sides = 8
-side_length = 10
+num_sides = 6
+side_length = 50
 offset = 10
 
-#(Step 2) 
-for i in range(6):
+#(Step 2) generates the points for polygon
+for i in range(side_length):
   theta = (2.0 * math.pi * (i)) / num_sides
   x = side_length * math.cos(theta) + offset
   y = side_length * math.sin(theta) + offset
   coords.append(x)
   coords.append(y)
 
-#(Step 3)
-pygame.draw.polygon(pygame.Surface., 'blue', coords)
+#(Step 3) 
+pygame.draw.polygon(window, 'blue', coords)
+pygame.display.flip()
 pygame.time.wait(500)
+
+#reset screen
 window.fill('green')
 pygame.display.flip()
 
