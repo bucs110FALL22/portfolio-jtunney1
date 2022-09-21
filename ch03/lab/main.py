@@ -3,6 +3,9 @@ import random
 import pygame
 import math
 
+pygame.init()
+window = pygame.display.set_mode()
+
 #Part A
 window = turtle.Screen() # 2.  Create a screen
 window.bgcolor('lightblue')
@@ -63,12 +66,19 @@ side_length = 10
 offset = 10
 
 #(Step 2) 
-for i in range(5):
+for i in range(6):
   theta = (2.0 * math.pi * (i)) / num_sides
   x = side_length * math.cos(theta) + offset
   y = side_length * math.sin(theta) + offset
-  coords.append(x, y)
+  coords.append(x)
+  coords.append(y)
 
 #(Step 3)
+pygame.draw.polygon(pygame.Surface., 'blue', coords)
+pygame.time.wait(500)
+window.fill('green')
+pygame.display.flip()
+
+
 
 window.exitonclick()
