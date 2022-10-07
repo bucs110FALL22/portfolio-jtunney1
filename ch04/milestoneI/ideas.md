@@ -18,12 +18,12 @@ For each one below you should have a basic description of a program idea, a coup
 
 ## Project Idea 1
 
-< add your idea here >
+Simulator game that simulates running a university and choosing what to invest in. Move up ranks of universities and become best univesity to win the game. 
 
 ## Project Idea 2
 
-< add your idea here >
+Exercise simulator. A game where you have a character do different exercises which effect the size and shape of the character. Shows the way the body changes due to physical exercise. 
 
 ## Project Idea 3
 
-< add your idea here >
+Binghamton themed angry birds game. For the buildings being knocked down use actual school buildings. Instead of the birds use bearcats. Instead of pigs use the mascots of school rivals. Make it multiple levels with stars for completion of each level. If you get all the stars you win the game. 
