@@ -22,6 +22,12 @@ blue_button = pygame.draw.rect(screen, 'red',(red_square_pos_x,square_pos_y,squa
 blue_select = pygame.Rect(blue_square_pos_y, square_pos_y, square_length,square_length)
 red_select = pygame.Rect(red_square_pos_x, square_pos_y, square_length,square_length)
 
+#asking player for input
+msg = 'Click the box for which player you think will win!'
+font = pygame.font.Font(None, 18)
+font_object = font.render(msg, True, "white")
+screen.blit(font_object, (10, 10))
+
 pygame.display.flip()
 
 selection = False
