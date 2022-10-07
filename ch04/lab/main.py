@@ -17,9 +17,6 @@ blue_square_pos_y = 0
 
 playerSelection = 0
 
-bright_red = [255, 0, 0]
-bright_blue = [0, 0, 255]
-
 red_button = pygame.draw.rect(screen, 'blue',(blue_square_pos_y,square_pos_y,square_length,square_length))
 blue_button = pygame.draw.rect(screen, 'red',(red_square_pos_x,square_pos_y,square_length,square_length))
 blue_select = pygame.Rect(blue_square_pos_y, square_pos_y, square_length,square_length)
@@ -35,17 +32,12 @@ while not selection:
             mouse_click_pos = event.pos
             if red_select.collidepoint(mouse_click_pos):
                 playerSelection = 1
-                red_button = pygame.draw.rect(screen, bright_red,red_select)
                 selection = True
             elif blue_select.collidepoint(mouse_click_pos):
                 playerSelection = 2
-                purple_button = pygame.draw.rect(screen, bright_blue,blue_select)
                 selection = True
 
   
-
-
-
 pygame.display.flip()
 pygame.time.wait(1000)
 
@@ -92,9 +84,11 @@ for i in range(10):
     #draw dot at langing spot
     pygame.draw.circle(screen, 'green',(random_x,random_y),10)
 
+    
 #print the winner
 if player_red_score > player_blue_score:
   print('Player Red won the game with a score of: ', player_red_score)
+  print('Player Blue only had a score of: ', player_blue_score)
   if playerSelection == 1:
     print('You guessed correctly')
   else:
@@ -102,6 +96,7 @@ if player_red_score > player_blue_score:
     
 elif player_blue_score > player_red_score:
   print('Player Blue won the game with a score of: ', player_blue_score)
+  print('Player Red only had a score of: ', player_red_score)
   if playerSelection == 2:
     print('You guessed correctly')
   else:
@@ -111,4 +106,4 @@ else:
 
 
 pygame.display.flip()
-pygame.time.wait(1000)
+pygame.time.wait(5000)
