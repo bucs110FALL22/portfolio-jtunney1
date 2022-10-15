@@ -71,7 +71,7 @@ for i in range(10):
     player_red_score = player_red_score + 1
   else:
     #draw dot at langing spot
-    pygame.draw.circle(screen, 'green',(random_x,random_y),10)
+    pygame.draw.circle(screen, 'orange',(random_x,random_y),10)
 
   #player 2
       #create random landing spot of dart
@@ -84,11 +84,11 @@ for i in range(10):
 #determine if inside circle or not
   if distance_from_center <= screen_width/2:
     #draw dot at langing spot
-    pygame.draw.circle(screen, 'black',(random_x,random_y),10)
+    pygame.draw.circle(screen, 'blue',(random_x,random_y),10)
     player_blue_score = player_blue_score + 1
   else:
     #draw dot at langing spot
-    pygame.draw.circle(screen, 'green',(random_x,random_y),10)
+    pygame.draw.circle(screen, 'purple',(random_x,random_y),10)
 
     
 #print the winner
