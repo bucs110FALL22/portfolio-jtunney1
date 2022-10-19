@@ -12,6 +12,9 @@ def square(num=0):
   square = multiply(x=num,y=num)
   return square
 
-print(multiply(5,7))
-print(exponent(3,4))
-print(square(3))
+def main():
+  print(multiply(5,7))
+  print(exponent(3,4))
+  print(square(3))
+
+main()
