@@ -89,7 +89,7 @@ for i in range(10):
   else:
     #draw dot at langing spot
     pygame.draw.circle(screen, 'purple',(random_x,random_y),10)
-
+  pygame.display.flip()
     
 #print the winner
 if player_red_score > player_blue_score:

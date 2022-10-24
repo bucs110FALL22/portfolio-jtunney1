@@ -18,11 +18,11 @@ for i in range(2,upperlimit):
       else:
        x = x * 3 + 1
       numbers.append(x)
+      if count > max_so_far_count:
+       max_so_far_num = count
+       max_so_far = str(count)
+       max_val = str(i)
   dictonary[i] = count
-  if count > max_so_far_count:
-     max_so_far_num = count
-     max_so_far = str(count)
-     max_val = str(i)
 print(dictonary)
 list = [(k * scale, v * scale) for k, v in dictonary.items()]
 pygame.draw.lines(display, 'white', False, list)
