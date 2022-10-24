@@ -5,9 +5,9 @@ display = pygame.display.set_mode()
 
 dictonary = {}
 numbers = []
-max_so_far_count = 0
+max_so_far_num = 0
 scale = 3
-upperlimit = 100
+upperlimit = 98
 for i in range(2,upperlimit):
   count = 0
   x = i
@@ -18,7 +18,7 @@ for i in range(2,upperlimit):
       else:
        x = x * 3 + 1
       numbers.append(x)
-      if count > max_so_far_count:
+      if count > max_so_far_num:
        max_so_far_num = count
        max_so_far = str(count)
        max_val = str(i)
