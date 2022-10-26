@@ -19,7 +19,6 @@ def snowman_body(turtle):
   y_start = -400
   radius = 100
   turtle.color('white')
-
   for i in range(3):
    turtle.up()
    turtle.goto(x_start,y_start)
@@ -50,8 +49,32 @@ def snowman_buttons():
   turtle.end_fill()
     
 
-def snowman_hat():
-  pass
+def snowman_hat(turtle):
+  x_start = 0
+  y_start = 600
+  turtle.up()
+  turtle.goto(x_start,y_start)
+  turtle.color('black')
+  turtle.down()
+  turtle.begin_fill()
+  turtle.forward(50)
+  turtle.right(90)
+  turtle.forward(10)
+  turtle.right(90)
+  turtle.forward(30)
+  turtle.left(90)
+  turtle.forward(60)
+  turtle.right(90)
+  turtle.forward(40)
+  turtle.right(90)
+  turtle.forward(60)
+  turtle.left(90)
+  turtle.forward(30)
+  turtle.right(90)
+  turtle.forward(10)
+  turtle.right(90)
+  turtle.forward(50)
+  turtle.end_fill()
 
 def snowman_arms():
   pass
@@ -67,6 +90,7 @@ def main():
   background(screen)
   snowman_body(my_turtle)
   snowman_buttons()
+  snowman_hat(my_turtle)
 
   screen.exitonclick()
 main()
