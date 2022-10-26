@@ -1,11 +1,16 @@
 import turtle
-#snowman
+import random
 
 def background(screen):
   x_size = 700
   y_size = 800
-  screen.screensize(x_size,y_size,'light blue')
-
+  screen.screensize(x_size,y_size,'blue')
+  for i in range(25):
+    x_cord = random.randint(-320,320)
+    y_cord = random.randint(-350,350)
+    branches = random.randint(5,11)
+    snowflake(x_cord,y_cord,branches)
+  
 def snowball_size(ball_radius=0):
   ball_radius = ball_radius * .8
   return ball_radius
@@ -14,7 +19,7 @@ def snowball_start(y_ball_start=0,ball_radius=0):
   y_ball_start = y_ball_start + ball_radius * 1.5
   return y_ball_start
 
-def snowman_body(turtle):
+def snowman_body():
   x_start = 0
   y_start = -400
   radius = 100
@@ -31,66 +36,169 @@ def snowman_body(turtle):
   
   
 
-def snowman_face():
-  pass
+def snowman_eyes_nose():
+  eye_x = -25
+  eye_y = -40
+  radius = 7
+  turtle.color('black')
+  for i in range(2):
+    turtle.up()
+    turtle.goto(eye_x,eye_y)
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+    eye_x = eye_x + 50
+  turtle.up()
+  nose_x = 0
+  nose_y = -60
+  radius = 4
+  turtle.goto(nose_x,nose_y)
+  turtle.color('orange')
+  turtle.down()
+  turtle.begin_fill()
+  turtle.circle(radius)
+  turtle.end_fill()
+  turtle.up()
+
+def snowman_smile():
+  smile_x = 0
+  smile_y = -80
+  radius = 4
+  for i in range(3):    
+    turtle.goto(smile_x,smile_y)
+    turtle.color('black')
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+    turtle.up()
+    smile_x = smile_x + 15
+    smile_y = smile_y + 4
+  smile_x = -15
+  smile_y = -76
+  for i in range(2):
+    turtle.goto(smile_x,smile_y)
+    turtle.color('black')
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+    turtle.up()
+    smile_x = smile_x - 15
+    smile_y = smile_y + 4
+
+  
 
 def snowman_buttons():
   x_button = 0
   y_button = -210
   radius = 3
   turtle.color('black')
-  turtle.begin_fill()
   for i in range(3):
     turtle.up()
     turtle.goto(x_button,y_button)
     turtle.down()
+    turtle.begin_fill()
     turtle.circle(radius)
+    turtle.end_fill()
     y_button = y_button + 45
-  turtle.end_fill()
+  
     
 
-def snowman_hat(turtle):
+def snowman_hat():
   x_start = 0
-  y_start = 600
+  y_start = -15
   turtle.up()
   turtle.goto(x_start,y_start)
+  turtle.pd()
   turtle.color('black')
-  turtle.down()
+  turtle.right(180)
   turtle.begin_fill()
-  turtle.forward(50)
-  turtle.right(90)
-  turtle.forward(10)
-  turtle.right(90)
-  turtle.forward(30)
-  turtle.left(90)
   turtle.forward(60)
+  turtle.right(90)
+  turtle.forward(20)
   turtle.right(90)
   turtle.forward(40)
-  turtle.right(90)
-  turtle.forward(60)
   turtle.left(90)
-  turtle.forward(30)
-  turtle.right(90)
-  turtle.forward(10)
+  turtle.forward(50)
   turtle.right(90)
   turtle.forward(50)
+  turtle.right(90)
+  turtle.forward(50)
+  turtle.left(90)
+  turtle.forward(40)
+  turtle.right(90)
+  turtle.forward(20)
+  turtle.right(90)
+  turtle.forward(60)
   turtle.end_fill()
 
-def snowman_arms():
-  pass
+def left_snowman_arm():
+  left_arm_x = -63
+  left_arm_y = -115
+  turtle.up()
+  turtle.goto(left_arm_x,left_arm_y)
+  turtle.pd()
+  turtle.color('brown')
+  turtle.width(7)
+  turtle.right(20)
+  turtle.forward(80)
+  turtle.right(180)
+  turtle.forward(20)
+  turtle.right(150)
+  turtle.forward(25)
+  turtle.up()
 
-def snowflake():
-  pass
+def right_snowman_arm():
+  left_arm_x = 63
+  left_arm_y = -115
+  turtle.up()
+  turtle.goto(left_arm_x,left_arm_y)
+  turtle.pd()
+  turtle.color('brown')
+  turtle.width(7)
+  turtle.right(180)
+  turtle.forward(80)
+  turtle.right(180)
+  turtle.forward(20)
+  turtle.left(150)
+  turtle.forward(25)
+  turtle.up()
+  
+
+def snowflake(x_cord,y_cord,branches):
+  turtle.up()
+  turtle.goto(x_cord,y_cord)
+  turtle.down()
+  turtle.color('light blue')
+  turtle.width(3)
+  angle = 360 / branches
+  for i in range(branches):
+    turtle.forward(20)
+    turtle.right(30)
+    turtle.forward(10)
+    turtle.back(10)
+    turtle.left(60)
+    turtle.forward(10)
+    turtle.back(10)
+    turtle.right(30)
+    turtle.back(20)
+    turtle.right(angle)
+  turtle.up()
 
 def main():
-  my_turtle = turtle.Turtle() 
-  my_turtle.shape('turtle')
-  my_turtle.speed(0)
+  turtle.speed(0)
   screen = turtle.Screen()
   background(screen)
-  snowman_body(my_turtle)
+  snowman_body()
   snowman_buttons()
-  snowman_hat(my_turtle)
+  snowman_hat()
+  snowman_eyes_nose()
+  snowman_smile()
+  left_snowman_arm()
+  right_snowman_arm()
 
   screen.exitonclick()
+  
 main()
