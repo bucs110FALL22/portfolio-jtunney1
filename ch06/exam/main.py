@@ -1,6 +1,7 @@
 import turtle
 import random
 
+#create blue background and randomly generate snowflakes
 def background(screen):
   x_size = 700
   y_size = 800
@@ -10,15 +11,18 @@ def background(screen):
     y_cord = random.randint(-350,350)
     branches = random.randint(5,11)
     snowflake(x_cord,y_cord,branches)
-  
+
+#function that determines size of the next snowball on top
 def snowball_size(ball_radius=0):
   ball_radius = ball_radius * .8
   return ball_radius
 
+#determines where to start drawing the next snowball from
 def snowball_start(y_ball_start=0,ball_radius=0):
   y_ball_start = y_ball_start + ball_radius * 1.5
   return y_ball_start
 
+#function that creates the 3 snowballs for the snowmans body
 def snowman_body():
   x_start = 0
   y_start = -400
@@ -35,7 +39,7 @@ def snowman_body():
    turtle.end_fill()
   
   
-
+#creates eyes and nose for the face of the snowman
 def snowman_eyes_nose():
   eye_x = -25
   eye_y = -40
@@ -61,6 +65,7 @@ def snowman_eyes_nose():
   turtle.end_fill()
   turtle.up()
 
+#creates mouth of the snowman
 def snowman_smile():
   smile_x = 0
   smile_y = -80
@@ -89,7 +94,7 @@ def snowman_smile():
     smile_y = smile_y + 4
 
   
-
+#creates buttons for snowmans chest
 def snowman_buttons():
   x_button = 0
   y_button = -210
@@ -105,7 +110,7 @@ def snowman_buttons():
     y_button = y_button + 45
   
     
-
+#draws hat for snowman
 def snowman_hat():
   x_start = 0
   y_start = -15
@@ -134,6 +139,7 @@ def snowman_hat():
   turtle.forward(60)
   turtle.end_fill()
 
+#draws left side arm of snowman
 def left_snowman_arm():
   left_arm_x = -63
   left_arm_y = -115
@@ -150,6 +156,7 @@ def left_snowman_arm():
   turtle.forward(25)
   turtle.up()
 
+#draws right side arm of snowman
 def right_snowman_arm():
   left_arm_x = 63
   left_arm_y = -115
@@ -166,7 +173,7 @@ def right_snowman_arm():
   turtle.forward(25)
   turtle.up()
   
-
+#funtion takes in (x,y) coordinates and number of branches and generates a snowflake there
 def snowflake(x_cord,y_cord,branches):
   turtle.up()
   turtle.goto(x_cord,y_cord)
