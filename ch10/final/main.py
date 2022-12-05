@@ -1,5 +1,5 @@
 from Holidays import Holidays
-from Crypto import Crypto
+from Covid import Covid
 
 def main():
   pass

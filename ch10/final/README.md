@@ -1,9 +1,9 @@
 # CS110 Final Exam
 
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
-Crypto API application. Find average price of a certain crypto on certain US holidays.
+Find holiday with highest covid rate over last year.
 
-https://www.coingecko.com/en/api/documentation
+(https://api.covidtracking.com/v2/us/daily/2021-01-02/simple.json)
 https://date.nager.at/
 
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
